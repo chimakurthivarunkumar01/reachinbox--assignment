@@ -2,7 +2,7 @@
 
 A production-grade email scheduler service with dashboard for scheduling and sending emails at scale.
 
-## 🎯 Features
+##  Features
 
 ### Backend
 - Express.js API with TypeScript
@@ -25,7 +25,7 @@ A production-grade email scheduler service with dashboard for scheduling and sen
 - Scheduled and sent emails tables
 - Real-time status updates
 
-## 🏗️ Architecture
+## Architecture
 
 ### How Scheduling Works
 1. User schedules emails via dashboard
@@ -65,13 +65,13 @@ A production-grade email scheduler service with dashboard for scheduling and sen
 - React Query
 - Axios
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js 18+
 - Docker & Docker Compose
 - Google OAuth credentials
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
 ### 1. Clone Repository
 ```bash
@@ -155,7 +155,7 @@ npm run dev
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:3001
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 reachinbox-scheduler/
@@ -182,7 +182,7 @@ reachinbox-scheduler/
 └── README.md
 ```
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `GET /auth/google` - Initiate Google OAuth
@@ -196,7 +196,7 @@ reachinbox-scheduler/
 - `GET /api/emails/sent` - Get sent emails
 - `GET /api/emails/:id` - Get email details
 
-## 🧪 Testing
+## Testing
 
 ### Schedule Test Emails
 1. Login with Google
@@ -214,7 +214,7 @@ reachinbox-scheduler/
 4. Next 50 delayed to hour 2
 5. Pattern continues until all sent
 
-## 💾 Database Schema
+## Database Schema
 
 ```prisma
 model User {
@@ -257,7 +257,7 @@ enum EmailStatus {
 - Color-coded status badges
 - Real-time updates via React Query
 
-## 🔒 Security
+##  Security
 
 - Google OAuth for authentication
 - Session-based auth with secure cookies
@@ -266,7 +266,7 @@ enum EmailStatus {
 - SQL injection prevention (Prisma)
 - XSS protection (React)
 
-## 🚦 Status Codes
+## Status Codes
 
 - `SCHEDULED` - Email queued for sending
 - `SENDING` - Currently being sent
@@ -274,7 +274,7 @@ enum EmailStatus {
 - `FAILED` - Send failed (with error message)
 - `RATE_LIMITED` - Delayed due to rate limit
 
-## 📊 Performance
+##  Performance
 
 - Concurrent processing: 5 emails simultaneously
 - Rate limiting: Configurable per sender
@@ -282,27 +282,6 @@ enum EmailStatus {
 - Job persistence: Survives server restarts
 - Efficient queries: Database indexes on key fields
 
-## 🐛 Troubleshooting
 
-### Docker services not starting
-```bash
-docker-compose down
-docker-compose up -d
-```
 
-### Prisma client not generated
-```bash
-cd backend
-npx prisma generate
-```
 
-### Port already in use
-Change `PORT` in `backend/.env`
-
-## 📝 License
-
-MIT
-
-## 👨‍💻 Author
-
-Created for ReachInbox Software Development Intern Assignment
